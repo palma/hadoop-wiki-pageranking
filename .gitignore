@@ -3,5 +3,8 @@
 /.project
 /.classpath
 /.idea
+<<<<<<< HEAD
 **/nlwiki-latest-pages-articles.xml
 **/wiki
+=======
+>>>>>>> a3d33185c70a078d4f24e4e8930d3e3ca8f7d7c1
