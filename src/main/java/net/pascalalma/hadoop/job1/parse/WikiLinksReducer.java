@@ -1,4 +1,4 @@
-package net.pascalalma.hadoop.job1.xmlhakker;
+package net.pascalalma.hadoop.job1.parse;
 
 import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mapreduce.Reducer;

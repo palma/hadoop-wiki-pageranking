@@ -1,8 +1,8 @@
 package net.pascalalma.hadoop;
 
-import net.pascalalma.hadoop.job1.xmlhakker.WikiLinksReducer;
-import net.pascalalma.hadoop.job1.xmlhakker.WikiPageLinksMapper;
-import net.pascalalma.hadoop.job1.xmlhakker.XmlInputFormat;
+import net.pascalalma.hadoop.job1.parse.WikiLinksReducer;
+import net.pascalalma.hadoop.job1.parse.WikiPageLinksMapper;
+import net.pascalalma.hadoop.job1.parse.XmlInputFormat;
 import net.pascalalma.hadoop.job2.calculate.RankCalculateMapper;
 import net.pascalalma.hadoop.job2.calculate.RankCalculateReduce;
 import net.pascalalma.hadoop.job3.result.RankingMapper;
@@ -43,7 +43,7 @@ public class WikiPageRanking extends Configured implements Tool {
 
         String lastResultPath = null;
 
-        for (int runs = 0; runs < 5; runs++) {
+        for (int runs = 0; runs < 10; runs++) {
             String inPath = rankingPath + "/iter" + nf.format(runs);
             lastResultPath = rankingPath + "/iter" + nf.format(runs + 1);
 

@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package net.pascalalma.hadoop.job1.xmlhakker;
+package net.pascalalma.hadoop.job1.parse;
 
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.fs.FSDataInputStream;
