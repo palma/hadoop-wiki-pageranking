@@ -34,7 +34,7 @@ public class WikiPageRanking extends Configured implements Tool {
     @Override
     public int run(String[] args) throws Exception {
         String inputPath = args[0]+"/in";
-        String outputPath = args[0]+"/result2";
+        String outputPath = args[0]+"/result";
         String rankingPath = args[0]+"/ranking";
 
         //boolean isCompleted = runXmlParsing("wiki/in", "wiki/ranking/iter00");
@@ -43,7 +43,7 @@ public class WikiPageRanking extends Configured implements Tool {
 
         String lastResultPath = null;
 
-        for (int runs = 0; runs < 10; runs++) {
+        for (int runs = 0; runs < 5; runs++) {
             String inPath = rankingPath + "/iter" + nf.format(runs);
             lastResultPath = rankingPath + "/iter" + nf.format(runs + 1);
 
@@ -104,6 +104,7 @@ public class WikiPageRanking extends Configured implements Tool {
 
     private boolean runRankOrdering(String inputPath, String outputPath) throws IOException, ClassNotFoundException, InterruptedException {
         Configuration conf = new Configuration();
+
 
         Job rankOrdering = Job.getInstance(conf, "rankOrdering");
         rankOrdering.setJarByClass(WikiPageRanking.class);
